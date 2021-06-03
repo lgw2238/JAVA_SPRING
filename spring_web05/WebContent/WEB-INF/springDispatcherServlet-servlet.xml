@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!-- Handler Mapping -->
+<bean id="beanNameUrlHandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+	
+</bean>
+
+<!-- View Resolver -->
+
+<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/jsp/"/> <!-- view 앞에부분 -->
+	<property name="suffix" value=".jsp"/> <!-- view 경로부분 -->
+</bean>
+
+<!-- Controller -->
+<bean id="/hi.do" class="kr.co.goott.spring_web05.HiController">
+</bean>
+<bean id="/now.do" class="kr.co.goott.spring_web05.NowController">
+</bean>
+<bean id="/test.do" class="kr.co.goott.spring_web05.TestController">
+</bean>
+
+</beans>
